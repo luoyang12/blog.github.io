@@ -295,7 +295,7 @@
     clientID: '4111e2bc0fff84bf2e79',
     clientSecret: '72b60f8df8a0bf5c523ba53cef6f9f3dcc69dc7d',
     id: "Hello World2",
-    repo: 'loyang',
+    repo: 'blog comments',
     owner: 'luoyang12',
     admin: 'luoyang12',
     distractionFreeMode: 'true',
@@ -312,6 +312,22 @@
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://luoyang12.github.io/loyang/loyang/2019/04/18/first-show/",
+  owner: 'luoyang12',
+  repo: 'blog comments',
+  oauth: {
+    client_id: '4111e2bc0fff84bf2e79',
+    client_secret: '72b60f8df8a0bf5c523ba53cef6f9f3dcc69dc7d',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
