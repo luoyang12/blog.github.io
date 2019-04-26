@@ -165,7 +165,7 @@
 
         
         <a href="/loyang/2019/04/26/yilia主题加gitalk/" class="archive-article-date">
-  	<time datetime="2019-04-26T09:12:31.561Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
+  	<time datetime="2019-04-26T09:35:13.244Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
 </a>
         
       </header>
@@ -198,6 +198,9 @@
 <ul>
 <li>编辑yilia/layout/_partial/article.ejs 文件 的 <figure class="highlight plain"><figcaption><span>if (!index && post.comments)&#123; %>``` 行后加入下面一段</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```ejs</span><br><span class="line"> &lt;%- partial(&apos;post/gitalk&apos;, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
+<blockquote>
+<p>到这一步就大功告成啦，每篇文章的最底部就可以看见评论啦。<br><img src="http://testzp.res.my7v.com/tcast/res/bad45983-7bfe-4071-8f02-8ae0c4e5ce4b.png" alt="评论框图片"></p>
+</blockquote>
 <h3 id="Validation-Failed-解决方案"><a href="#Validation-Failed-解决方案" class="headerlink" title="Validation Failed 解决方案"></a>Validation Failed 解决方案</h3><p>看到gitalk issue 上提出出现这个问题是由于 URL超过50个字符无法生成label。<br>gitalk 项目readme文件中已有明确描述：</p>
 <blockquote>
 <p><code>id</code>: String<br><code>Default</code>: location.href.<br>The unique id of the page. Length must less than 50.</p>
