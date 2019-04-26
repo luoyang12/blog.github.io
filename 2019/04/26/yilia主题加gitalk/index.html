@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Loyang&#39;s Blog">
 <meta property="og:description" content="引言作为一个敢于接受批评（biao yang）的博主，博客咋能没有评论系统，这不。。。说加咱就加！经过多方比较，选定使用 gitalk 的评论系统 , 需 github 登录评论。 gitalk是一个基于 Github Issue 和 Preact 开发的评论插件，gitalk项目地址可以过去体验一下效果。 注册授权 进入github 注册一个，进去必填项不知道的话可以先随便填，后期可以进入应用详">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-26T06:37:26.931Z">
+<meta property="og:updated_time" content="2019-04-26T08:17:00.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客yilia主题加入评论系统">
 <meta name="twitter:description" content="引言作为一个敢于接受批评（biao yang）的博主，博客咋能没有评论系统，这不。。。说加咱就加！经过多方比较，选定使用 gitalk 的评论系统 , 需 github 登录评论。 gitalk是一个基于 Github Issue 和 Preact 开发的评论插件，gitalk项目地址可以过去体验一下效果。 注册授权 进入github 注册一个，进去必填项不知道的话可以先随便填，后期可以进入应用详">
@@ -164,7 +164,7 @@
 
         
         <a href="/loyang/2019/04/26/yilia主题加gitalk/" class="archive-article-date">
-  	<time datetime="2019-04-26T06:37:26.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
+  	<time datetime="2019-04-26T08:17:00.366Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
 </a>
         
       </header>
@@ -197,9 +197,9 @@
 <ul>
 <li>编辑yilia/layout/_partial/article.ejs 文件 的 <figure class="highlight plain"><figcaption><span>if (!index && post.comments)&#123; %>``` 行后加入下面一段</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```ejs</span><br><span class="line"> &lt;%- partial(&apos;post/gitalk&apos;, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="Validation-Failed-解决方案"><a href="#Validation-Failed-解决方案" class="headerlink" title="Validation Failed 解决方案"></a>Validation Failed 解决方案</h3><p>看到gitalk issue 上提出出现这个问题是由于 URL超过50个字符无法生成label。<br><br>gitalk 项目readme文件中已有明确描述：</p>
+<h3 id="Validation-Failed-解决方案"><a href="#Validation-Failed-解决方案" class="headerlink" title="Validation Failed 解决方案"></a>Validation Failed 解决方案</h3><p>看到gitalk issue 上提出出现这个问题是由于 URL超过50个字符无法生成label。<br>gitalk 项目readme文件中已有明确描述：</p>
 <blockquote>
-<p><code>id</code>: String <br><br><code>Default</code>: location.href. <br><br>The unique id of the page. Length must less than 50.</p>
+<p><code>id</code>: String<br><code>Default</code>: location.href.<br>The unique id of the page. Length must less than 50.</p>
 </blockquote>
 <p><a href="https://github.com/gitalk/gitalk/issues/102" target="_blank" rel="noopener">Validation Failed 解决方案</a></p>
 <h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>走到最后一步评论系统就可以用啦，有什么问题可在评论区提出，后续有问题再补充上去。<br><br>感谢～</p>
