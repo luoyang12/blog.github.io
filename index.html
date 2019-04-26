@@ -152,20 +152,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hexo博客yilia主题加入评论系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-yilia主题加评论系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/loyang/2019/04/26/hexo博客yilia主题加入评论系统/">hexo博客yilia主题加入评论系统</a>
+      <a class="article-title" href="/loyang/2019/04/26/yilia主题加评论系统/">hexo博客yilia主题加入评论系统</a>
     </h1>
   
 
         
-        <a href="/loyang/2019/04/26/hexo博客yilia主题加入评论系统/" class="archive-article-date">
-  	<time datetime="2019-04-26T05:21:48.109Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
+        <a href="/loyang/2019/04/26/yilia主题加评论系统/" class="archive-article-date">
+  	<time datetime="2019-04-26T06:37:26.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
 </a>
         
       </header>
@@ -198,6 +198,11 @@
 <ul>
 <li>编辑yilia/layout/_partial/article.ejs 文件 的 <figure class="highlight plain"><figcaption><span>if (!index && post.comments)&#123; %>``` 行后加入下面一段</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```ejs</span><br><span class="line"> &lt;%- partial(&apos;post/gitalk&apos;, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
+<h3 id="Validation-Failed-解决方案"><a href="#Validation-Failed-解决方案" class="headerlink" title="Validation Failed 解决方案"></a>Validation Failed 解决方案</h3><p>看到gitalk issue 上提出出现这个问题是由于 URL超过50个字符无法生成label。<br><br>gitalk 项目readme文件中已有明确描述：</p>
+<blockquote>
+<p><code>id</code>: String <br><br><code>Default</code>: location.href. <br><br>The unique id of the page. Length must less than 50.</p>
+</blockquote>
+<p><a href="https://github.com/gitalk/gitalk/issues/102" target="_blank" rel="noopener">Validation Failed 解决方案</a></p>
 <h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>走到最后一步评论系统就可以用啦，有什么问题可在评论区提出，后续有问题再补充上去。<br><br>感谢～</p>
 
       
@@ -211,7 +216,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/loyang/2019/04/26/hexo博客yilia主题加入评论系统/">展开全文 >></a>
+          <a class="article-more-a" href="/loyang/2019/04/26/yilia主题加评论系统/">展开全文 >></a>
         </p>
       
 
